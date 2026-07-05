@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /*
+   * Four-color professional system
+   * 1. Navy   — headings, authority text
+   * 2. Bronze — primary actions, accents, charts
+   * 3. Steel  — secondary text, muted UI, chart variety
+   * 4. Ivory  — soft surfaces, icon chips (cards stay white)
+   */
+
+  --color-surface: #f7f5f2;
+  --color-card: #ffffff;
+  --color-border: #e8e4de;
+  --color-header-bar: #0f172a;
+
+  /* Bronze (primary) */
+  --color-brand-50: #faf6f1;
+  --color-brand-100: #f3ebe0;
+  --color-brand-200: #e6d4bc;
+  --color-brand-300: #d4b48f;
+  --color-brand-400: #c09264;
+  --color-brand-500: #a67c52;
+  --color-brand-600: #8b6914;
+  --color-brand-700: #6f5410;
+  --color-brand-800: #5a4410;
+  --color-brand-900: #3d2b1f;
+  --color-brand-950: #2a1d14;
+
+  /* Steel (secondary) */
+  --color-steel-50: #f8fafc;
+  --color-steel-100: #f1f5f9;
+  --color-steel-200: #e2e8f0;
+  --color-steel-300: #cbd5e1;
+  --color-steel-400: #94a3b8;
+  --color-steel-500: #64748b;
+  --color-steel-600: #475569;
+  --color-steel-700: #334155;
+  --color-steel-800: #1e293b;
+  --color-steel-900: #0f172a;
+
+  /* Sky maps to steel for compatibility */
+  --color-sky-50: #f8fafc;
+  --color-sky-100: #f1f5f9;
+  --color-sky-200: #e2e8f0;
+  --color-sky-300: #cbd5e1;
+  --color-sky-400: #94a3b8;
+  --color-sky-500: #64748b;
+  --color-sky-600: #475569;
+  --color-sky-700: #334155;
+  --color-sky-800: #1e293b;
+  --color-sky-900: #0f172a;
+  --color-sky-950: #020617;
+
+  /* Navy text scale */
+  --color-ink-50: #f8fafc;
+  --color-ink-100: #f3ebe0;
+  --color-ink-200: #e8e4de;
+  --color-ink-300: #d4b48f;
+  --color-ink-400: #64748b;
+  --color-ink-500: #475569;
+  --color-ink-600: #334155;
+  --color-ink-700: #1e293b;
+  --color-ink-800: #0f172a;
+  --color-ink-900: #0f172a;
+  --color-ink-950: #020617;
+
+  --color-active: #f3ebe0;
+
+  --color-accent-400: #d4b48f;
+  --color-accent-500: #a67c52;
+  --color-accent-600: #8b6914;
+  --color-danger-500: #dc2626;
+  --color-danger-600: #b91c1c;
+  --color-warn-500: #d97706;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  background: #f7f5f2;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.025em;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* Login page — blue entrance preserved */
+.login-page h1,
+.login-page h2,
+.login-page h3,
+.login-page h4,
+.login-page p {
+  color: inherit;
+}
+
+.login-page .text-white {
+  color: #ffffff !important;
+}
+
+.login-page .text-slate-200 {
+  color: #e2e8f0 !important;
+}
+
+.login-page .text-slate-300 {
+  color: #cbd5e1 !important;
+}
+
+.login-page .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+.login-page .text-slate-500 {
+  color: #64748b !important;
+}
+
+.login-page .text-slate-600 {
+  color: #475569 !important;
+}
+
+.login-page .text-slate-700 {
+  color: #334155 !important;
+}
+
+.login-page .text-slate-800 {
+  color: #1e293b !important;
+}
+
+.login-page .text-slate-900 {
+  color: #0f172a !important;
+}
+
+.login-page .text-blue-100 {
+  color: #dbeafe !important;
+}
+
+.login-page .text-blue-200 {
+  color: #bfdbfe !important;
+}
+
+/* Professional card utility */
+.pro-card {
+  background: #ffffff;
+  border: 1px solid #e8e4de;
+  border-radius: 1rem;
+  box-shadow:
+    0 1px 2px rgb(15 23 42 / 0.04),
+    0 4px 12px rgb(15 23 42 / 0.03);
+}
+
+.pro-card:hover {
+  box-shadow:
+    0 2px 4px rgb(15 23 42 / 0.05),
+    0 8px 20px rgb(15 23 42 / 0.05);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4b48f;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a67c52;
+}
